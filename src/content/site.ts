@@ -4,7 +4,7 @@ import images from "./images.json";
 
 export const site = {
   name: "Raoua",
-  fullName: "Raoua", // TODO: last name
+  fullName: "Raoua Krimi",
   role: "Brand, motion & product designer",
   description:
     "Product designer with 5+ years of experience creating high-converting, accessible digital experiences: website redesigns, design systems, brand identities and motion.",
