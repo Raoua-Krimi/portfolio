@@ -17,5 +17,5 @@ npm run build && npm start
 
 ## Still to fill in
 
-Search for `TODO` in `src/content`: email, LinkedIn / Behance / Instagram, resume PDF, domain,
+Search for `TODO` in `src/content`: Behance / Instagram, resume PDF, domain,
 The Flex Academy case study, and the spelling of the Flyingshapes client.

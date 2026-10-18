@@ -242,9 +242,8 @@ export function Strengths() {
 }
 
 export function Contact() {
-  // TODO: until the email and LinkedIn are filled in, both buttons stay on this section.
-  const email = site.email ? `mailto:${site.email}` : "#contact";
-  const linkedin = site.social.linkedin || "#contact";
+  const email = `mailto:${site.email}`;
+  const linkedin = site.social.linkedin;
   return (
     <section id="contact" data-spotlight className="scroll-mt-20 overflow-hidden py-28 sm:py-36">
       <Container className="text-center">

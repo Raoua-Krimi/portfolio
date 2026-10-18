@@ -9,10 +9,10 @@ export const site = {
   description:
     "Product designer with 5+ years of experience creating high-converting, accessible digital experiences: website redesigns, design systems, brand identities and motion.",
   url: "https://raoua.design", // TODO: real domain
-  email: "", // TODO: e.g. hello@raoua.design
+  email: "raouakrimi@gmail.com",
   resume: "", // TODO: /raoua-resume.pdf once the file is in public/
   social: {
-    linkedin: "", // TODO
+    linkedin: "https://www.linkedin.com/in/rawaa-krimi-289b7819b/",
     behance: "", // TODO
     instagram: "", // TODO
   },
