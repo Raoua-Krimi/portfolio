@@ -99,7 +99,7 @@ function CardMedia({ p, className }: { p: Project; className: string }) {
   }
   return (
     <div className={`zoom-media ${className}`}>
-      <Image src={p.image.src} width={p.image.width} height={p.image.height} alt={`${p.title}, cover`} sizes="(min-width: 1024px) 600px, 100vw" className="h-full w-full object-cover" />
+      <Image src={p.image.src} width={p.image.width} height={p.image.height} alt={`${p.title}, cover`} quality={90} sizes="(min-width: 1024px) 900px, 100vw" className="h-full w-full object-cover" />
     </div>
   );
 }
