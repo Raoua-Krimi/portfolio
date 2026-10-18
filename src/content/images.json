@@ -1,153 +1,233 @@
 {
  "gioco-news": {
   "hero": {
-   "src": "/work/gioco-news/00-hero.jpg",
-   "width": 1074,
-   "height": 548
+   "src": "/work/gioco-news/00-hero.webp",
+   "width": 1604,
+   "height": 817
   },
   "before-after": {
-   "src": "/work/gioco-news/01-before-after.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/01-before-after.webp",
+   "width": 2058,
+   "height": 944
   },
   "typography-colour": {
-   "src": "/work/gioco-news/02-typography-colour.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/02-typography-colour.webp",
+   "width": 2028,
+   "height": 837
   },
   "anatomy-components-spacing": {
-   "src": "/work/gioco-news/03-anatomy-components-spacing.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/03-anatomy-components-spacing.webp",
+   "width": 2130,
+   "height": 804
   },
   "brand": {
-   "src": "/work/gioco-news/04-brand.jpg",
-   "width": 1112,
-   "height": 517
-  },
-  "buttons-tabs": {
-   "src": "/work/gioco-news/05-buttons-tabs.jpg",
-   "width": 1120,
-   "height": 321
+   "src": "/work/gioco-news/04-brand.webp",
+   "width": 1855,
+   "height": 1016
   },
   "inputs": {
-   "src": "/work/gioco-news/06-inputs.jpg",
-   "width": 1120,
-   "height": 321
+   "src": "/work/gioco-news/06-inputs.webp",
+   "width": 2240,
+   "height": 640
   },
   "icons": {
-   "src": "/work/gioco-news/07-icons.jpg",
-   "width": 1120,
-   "height": 131
+   "src": "/work/gioco-news/07-icons.webp",
+   "width": 2240,
+   "height": 260
   },
   "cards": {
-   "src": "/work/gioco-news/08-cards.jpg",
-   "width": 1120,
-   "height": 938
+   "src": "/work/gioco-news/08-cards.webp",
+   "width": 2240,
+   "height": 1874
   },
   "page-home": {
-   "src": "/work/gioco-news/09-page-home.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/09-page-home.webp",
+   "width": 1836,
+   "height": 832
   },
   "page-article": {
-   "src": "/work/gioco-news/10-page-article.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/10-page-article.webp",
+   "width": 1827,
+   "height": 832
   },
   "page-top-list": {
-   "src": "/work/gioco-news/11-page-top-list.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/11-page-top-list.webp",
+   "width": 1825,
+   "height": 830
   },
   "page-search": {
-   "src": "/work/gioco-news/12-page-search.jpg",
-   "width": 1120,
-   "height": 557
+   "src": "/work/gioco-news/12-page-search.webp",
+   "width": 1840,
+   "height": 699
   },
   "page-about": {
-   "src": "/work/gioco-news/13-page-about.jpg",
-   "width": 1112,
-   "height": 568
+   "src": "/work/gioco-news/13-page-about.webp",
+   "width": 1821,
+   "height": 870
+  },
+  "buttons": {
+   "src": "/work/gioco-news/05-buttons.webp",
+   "width": 1080,
+   "height": 640
+  },
+  "tabs": {
+   "src": "/work/gioco-news/05-tabs.webp",
+   "width": 1080,
+   "height": 640
   }
  },
  "flyingshapes": {
   "hero": {
    "src": "/work/flyingshapes/00-hero.jpg",
-   "width": 1072,
-   "height": 549
+   "width": 2144,
+   "height": 1098
   },
   "product-process": {
    "src": "/work/flyingshapes/01-product-process.jpg",
-   "width": 1072,
-   "height": 893
+   "width": 2144,
+   "height": 1748
   },
   "research": {
    "src": "/work/flyingshapes/02-research.jpg",
-   "width": 1120,
-   "height": 1075
+   "width": 2240,
+   "height": 2148
   },
   "design-system": {
    "src": "/work/flyingshapes/03-design-system.jpg",
-   "width": 1072,
-   "height": 718
-  },
-  "buttons-navigation": {
-   "src": "/work/flyingshapes/04-buttons-navigation.jpg",
-   "width": 1072,
-   "height": 275
+   "width": 2144,
+   "height": 1434
   },
   "inputs": {
    "src": "/work/flyingshapes/05-inputs.jpg",
-   "width": 1072,
-   "height": 286
+   "width": 2144,
+   "height": 570
   },
   "icons": {
    "src": "/work/flyingshapes/06-icons.jpg",
-   "width": 1072,
-   "height": 236
+   "width": 2144,
+   "height": 470
   },
   "cards": {
    "src": "/work/flyingshapes/07-cards.jpg",
-   "width": 1072,
-   "height": 432
+   "width": 2144,
+   "height": 842
   },
   "website": {
    "src": "/work/flyingshapes/08-website.jpg",
    "width": 992,
    "height": 2126
   },
-  "social-grid": {
-   "src": "/work/flyingshapes/09-social-grid.jpg",
-   "width": 1080,
-   "height": 1490
-  },
-  "social-featured": {
-   "src": "/work/flyingshapes/10-social-featured.jpg",
-   "width": 954,
-   "height": 940
-  },
   "card": {
    "src": "/work/flyingshapes/card.jpg",
-   "width": 594,
-   "height": 418
+   "width": 1191,
+   "height": 840
+  },
+  "buttons": {
+   "src": "/work/flyingshapes/04-buttons.jpg",
+   "width": 1032,
+   "height": 522
+  },
+  "navigation": {
+   "src": "/work/flyingshapes/04-navigation.jpg",
+   "width": 1032,
+   "height": 470
+  },
+  "social-01": {
+   "src": "/work/flyingshapes/10-social-01.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-02": {
+   "src": "/work/flyingshapes/10-social-02.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-03": {
+   "src": "/work/flyingshapes/10-social-03.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-04": {
+   "src": "/work/flyingshapes/10-social-04.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-05": {
+   "src": "/work/flyingshapes/10-social-05.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-06": {
+   "src": "/work/flyingshapes/10-social-06.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-07": {
+   "src": "/work/flyingshapes/10-social-07.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-08": {
+   "src": "/work/flyingshapes/10-social-08.jpg",
+   "width": 358,
+   "height": 371
+  },
+  "social-09": {
+   "src": "/work/flyingshapes/10-social-09.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-10": {
+   "src": "/work/flyingshapes/10-social-10.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-11": {
+   "src": "/work/flyingshapes/10-social-11.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "social-12": {
+   "src": "/work/flyingshapes/10-social-12.jpg",
+   "width": 682,
+   "height": 675
+  },
+  "featured-1": {
+   "src": "/work/flyingshapes/11-featured-1.jpg",
+   "width": 905,
+   "height": 905
+  },
+  "featured-2": {
+   "src": "/work/flyingshapes/11-featured-2.jpg",
+   "width": 905,
+   "height": 905
+  },
+  "featured-3": {
+   "src": "/work/flyingshapes/11-featured-3.jpg",
+   "width": 905,
+   "height": 905
+  },
+  "featured-4": {
+   "src": "/work/flyingshapes/11-featured-4.jpg",
+   "width": 905,
+   "height": 905
   }
  },
  "myrhis": {
   "hero": {
    "src": "/work/myrhis/00-hero.jpg",
-   "width": 1030,
-   "height": 587
+   "width": 2084,
+   "height": 1172
   },
   "logo-mark": {
    "src": "/work/myrhis/01-logo-mark.jpg",
-   "width": 1030,
-   "height": 580
+   "width": 2061,
+   "height": 1159
   },
   "palette": {
-   "src": "/work/myrhis/02-palette.jpg",
-   "width": 1030,
-   "height": 580
+   "src": "/work/myrhis/02-palette.webp",
+   "width": 2061,
+   "height": 1159
   },
   "mark-construction": {
    "src": "/work/myrhis/03-mark-construction.jpg",
@@ -156,88 +236,88 @@
   },
   "logo-blue-orange": {
    "src": "/work/myrhis/04-logo-blue-orange.jpg",
-   "width": 1030,
-   "height": 580
+   "width": 2061,
+   "height": 1159
   },
   "logo-dark-light": {
    "src": "/work/myrhis/05-logo-dark-light.jpg",
-   "width": 1030,
-   "height": 581
+   "width": 2061,
+   "height": 1159
   },
   "logo-deep-blue": {
    "src": "/work/myrhis/06-logo-deep-blue.jpg",
-   "width": 1030,
-   "height": 580
+   "width": 2061,
+   "height": 1159
   },
   "logo-on-shape": {
    "src": "/work/myrhis/07-logo-on-shape.jpg",
-   "width": 1030,
-   "height": 580
+   "width": 2061,
+   "height": 1159
   },
   "app-icon": {
    "src": "/work/myrhis/08-app-icon.jpg",
-   "width": 1030,
-   "height": 355
+   "width": 2061,
+   "height": 969
   },
   "app-icon-system": {
-   "src": "/work/myrhis/09-app-icon-system.jpg",
-   "width": 1030,
-   "height": 580
+   "src": "/work/myrhis/09-app-icon-system.webp",
+   "width": 2061,
+   "height": 1159
   },
   "mark-meaning": {
    "src": "/work/myrhis/10-mark-meaning.jpg",
-   "width": 1030,
-   "height": 580
+   "width": 2061,
+   "height": 1159
   },
   "colours": {
    "src": "/work/myrhis/11-colours.jpg",
-   "width": 1030,
-   "height": 580
+   "width": 2061,
+   "height": 1159
   },
   "palette-rationale": {
    "src": "/work/myrhis/12-palette-rationale.jpg",
-   "width": 1030,
-   "height": 486
+   "width": 2061,
+   "height": 969
   },
   "web-sizes": {
    "src": "/work/myrhis/13-web-sizes.jpg",
-   "width": 1030,
-   "height": 395
+   "width": 2061,
+   "height": 1159
   },
   "mobile-app-logo": {
    "src": "/work/myrhis/14-mobile-app-logo.jpg",
-   "width": 1030,
-   "height": 405
+   "width": 2061,
+   "height": 1159
   },
   "combinations": {
    "src": "/work/myrhis/15-combinations.jpg",
-   "width": 1030,
-   "height": 428
+   "width": 2061,
+   "height": 1159
   },
   "palette-cards": {
    "src": "/work/myrhis/16-palette-cards.jpg",
-   "width": 1030,
-   "height": 360
+   "width": 2061,
+   "height": 1159
   },
   "mockup-login": {
    "src": "/work/myrhis/17-mockup-login.jpg",
-   "width": 1030,
-   "height": 533
+   "width": 2060,
+   "height": 1158
   },
   "mockup-email": {
-   "src": "/work/myrhis/18-mockup-email.jpg",
-   "width": 1030,
-   "height": 607
+   "src": "/work/myrhis/18-mockup-email.webp",
+   "width": 2060,
+   "height": 1214
   },
   "mockup-phones": {
-   "src": "/work/myrhis/19-mockup-phones.jpg",
-   "width": 1030,
-   "height": 533
+   "src": "/work/myrhis/19-mockup-phones.webp",
+   "width": 2060,
+   "height": 1065
   },
   "thank-you": {
    "src": "/work/myrhis/20-thank-you.jpg",
-   "width": 1030,
-   "height": 581
+   "width": 2061,
+   "height": 1159
   }
  },
  "home": {
@@ -248,13 +328,13 @@
   },
   "gioco-card": {
    "src": "/work/gioco-news/card.jpg",
-   "width": 777,
-   "height": 394
+   "width": 1191,
+   "height": 840
   },
   "myrhis-card": {
    "src": "/work/myrhis/card.jpg",
-   "width": 796,
-   "height": 454
+   "width": 1020,
+   "height": 701
   }
  },
  "tools": {

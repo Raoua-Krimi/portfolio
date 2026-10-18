@@ -13,7 +13,7 @@ npm run build && npm start
 - `src/content/site.ts`: home page text, projects, tools, strengths, contact links.
 - `src/content/cases.ts`: the case studies. Their order is the order of the previous / next links.
 - `public/work/<project>/`: the images, cut from the design exports.
-- `design/` (not in git): Raoua's original SVG and PNG exports.
+- `design/` and `pictures/` (not in git): Raoua's design exports and her full-resolution originals.
 
 ## Still to fill in
 

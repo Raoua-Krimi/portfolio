@@ -42,3 +42,5 @@ next-env.d.ts
 
 # Raoua's design exports (about 200 MB): the source of the images in public/, not part of the site.
 /design
+# Her full-resolution originals: the source of the case-study images in public/work.
+/pictures

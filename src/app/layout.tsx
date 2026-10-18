@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name}, ${site.role}`, template: `%s · ${site.name}` },
   description: site.description,
-  openGraph: { title: `${site.name}, ${site.role}`, description: site.description, siteName: site.name, type: "website", images: [{ url: "/work/gioco-news/00-hero.jpg" }] },
+  openGraph: { title: `${site.name}, ${site.role}`, description: site.description, siteName: site.name, type: "website", images: [{ url: "/work/gioco-news/card.jpg" }] },
   twitter: { card: "summary_large_image" },
 };
 

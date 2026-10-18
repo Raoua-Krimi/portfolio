@@ -8,7 +8,7 @@ export type Figure = { img: Img; alt: string; title?: string; caption?: string }
 
 export type Block =
   | { kind: "text"; label?: string; title: string; body?: string[] }
-  | { kind: "figures"; title?: string; caption?: string; items: Figure[] };
+  | { kind: "figures"; title?: string; caption?: string; items: Figure[]; /** Side by side from tablet width up. */ cols?: 2 | 3 };
 
 export type CaseStudy = {
   slug: string;
@@ -80,7 +80,14 @@ export const cases: CaseStudy[] = [
         ],
       },
       { kind: "figures", items: [{ img: g.brand, alt: "The new Gioco News logo, its construction grid and brand colours" }] },
-      { kind: "figures", title: "Buttons and Tabs", items: [{ img: g["buttons-tabs"], alt: "Button and tab components in their states" }] },
+      {
+        kind: "figures",
+        cols: 2,
+        items: [
+          { img: g.buttons, alt: "Call to action buttons in their states", title: "Buttons" },
+          { img: g.tabs, alt: "Tab components in their states", title: "Tabs" },
+        ],
+      },
       { kind: "figures", title: "Inputs and Miscellaneous", items: [{ img: g.inputs, alt: "Search inputs, table of contents, rating and badge components" }] },
       { kind: "figures", title: "Icons", items: [{ img: g.icons, alt: "The icon set" }] },
       { kind: "figures", title: "Cards", items: [{ img: g.cards, alt: "Listing, author and article cards" }] },
@@ -155,9 +162,11 @@ export const cases: CaseStudy[] = [
       { kind: "figures", items: [{ img: f["design-system"], alt: "The Flyingshapes wordmark, colours and type scale" }] },
       {
         kind: "figures",
-        title: "Buttons and Navigation",
-        caption: "Three button styles, inverted for dark and light sections. The navigation keeps the wordmark left, two links, and Contact set apart on the right.",
-        items: [{ img: f["buttons-navigation"], alt: "Buttons in dark and light themes, and the navigation bar" }],
+        cols: 2,
+        items: [
+          { img: f.buttons, alt: "Bold, primary and secondary buttons in dark and light themes", title: "Buttons", caption: "Three styles, inverted for dark and light sections." },
+          { img: f.navigation, alt: "The navigation bar, full and compact", title: "Navigation", caption: "Wordmark left, two links, and Contact set apart on the right." },
+        ],
       },
       { kind: "figures", title: "Inputs and Miscellaneous", caption: "Product entry cards for the Get Started page, one per product.", items: [{ img: f.inputs, alt: "Product entry cards for the VR app and the web platform" }] },
       { kind: "figures", title: "Icons", caption: "Benefit tiles for the productivity section, one icon and one short line each.", items: [{ img: f.icons, alt: "Benefit tiles with icons" }] },
@@ -174,9 +183,20 @@ export const cases: CaseStudy[] = [
       {
         kind: "figures",
         title: "The Social Posts",
+        cols: 3,
+        items: Array.from({ length: 12 }, (_, i) => ({
+          img: f[`social-${String(i + 1).padStart(2, "0")}` as keyof typeof f],
+          alt: `Flyingshapes social media post ${i + 1}`,
+        })),
+      },
+      {
+        kind: "figures",
+        cols: 2,
         items: [
-          { img: f["social-grid"], alt: "A grid of Flyingshapes social media posts" },
-          { img: f["social-featured"], alt: "Featured social media posts" },
+          { img: f["featured-1"], alt: "Post: Start reviewing 3D design online today" },
+          { img: f["featured-2"], alt: "Post: 5 pro tips for 3D designers" },
+          { img: f["featured-3"], alt: "Post: Interact with your designs in 3D space" },
+          { img: f["featured-4"], alt: "Post: 4 tips for building a winning 3D design portfolio" },
         ],
       },
       {

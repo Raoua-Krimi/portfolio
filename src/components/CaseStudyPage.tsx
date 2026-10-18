@@ -8,7 +8,7 @@ import { ArrowLeftIcon, ArrowRightIcon, ExpandIcon } from "./icons";
 import { CaseKeys, Lightbox } from "./Lightbox";
 import { Container, stagger } from "./ui";
 
-function Zoomable({ f, priority = false }: { f: Figure; priority?: boolean }) {
+function Zoomable({ f, priority = false, sizes = "(min-width: 1056px) 1056px, 100vw" }: { f: Figure; priority?: boolean; sizes?: string }) {
   return (
     <button
       type="button"
@@ -17,7 +17,7 @@ function Zoomable({ f, priority = false }: { f: Figure; priority?: boolean }) {
       data-zoom-w={f.img.width}
       data-zoom-h={f.img.height}
       aria-label={`Enlarge: ${f.alt}`}
-      className="group relative block w-full cursor-zoom-in overflow-hidden rounded-[4px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--case-ink)]"
+      className="group relative block w-full cursor-zoom-in overflow-hidden rounded-[4px] ring-1 ring-line focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--case-ink)]"
     >
       <Image
         src={f.img.src}
@@ -25,7 +25,8 @@ function Zoomable({ f, priority = false }: { f: Figure; priority?: boolean }) {
         height={f.img.height}
         alt={f.alt}
         priority={priority}
-        sizes="(min-width: 1056px) 1056px, 100vw"
+        quality={90}
+        sizes={sizes}
         className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.012]"
       />
       <span className="pointer-events-none absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/55 text-white opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100">
@@ -109,10 +110,16 @@ export function CaseStudyPage({ c }: { c: CaseStudy }) {
                     {b.caption ? <p className="mt-2 max-w-3xl text-[15px] text-muted">{b.caption}</p> : null}
                   </div>
                 ) : null}
-                <div className="space-y-6">
-                  {b.items.map((f) => (
-                    <div key={f.img.src} data-reveal>
-                      <Zoomable f={f} />
+                <div className={b.cols ? `grid gap-6 ${b.cols === 3 ? "grid-cols-2 sm:grid-cols-3 sm:gap-5" : "sm:grid-cols-2"}` : "space-y-6"}>
+                  {b.items.map((f, j) => (
+                    <div key={f.img.src} data-reveal style={b.cols ? stagger(j % b.cols, 90) : undefined}>
+                      {f.title ? (
+                        <div className="mb-4">
+                          <h3 className="text-xl font-semibold text-ink">{f.title}</h3>
+                          {f.caption ? <p className="mt-1.5 text-[15px] text-muted">{f.caption}</p> : null}
+                        </div>
+                      ) : null}
+                      <Zoomable f={f} sizes={b.cols ? `(min-width: 1056px) ${Math.round(1056 / b.cols)}px, ${b.cols === 3 ? 50 : 100}vw` : undefined} />
                     </div>
                   ))}
                 </div>
