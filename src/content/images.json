@@ -1,0 +1,292 @@
+{
+ "gioco-news": {
+  "hero": {
+   "src": "/work/gioco-news/00-hero.jpg",
+   "width": 1074,
+   "height": 548
+  },
+  "before-after": {
+   "src": "/work/gioco-news/01-before-after.jpg",
+   "width": 1112,
+   "height": 568
+  },
+  "typography-colour": {
+   "src": "/work/gioco-news/02-typography-colour.jpg",
+   "width": 1112,
+   "height": 568
+  },
+  "anatomy-components-spacing": {
+   "src": "/work/gioco-news/03-anatomy-components-spacing.jpg",
+   "width": 1112,
+   "height": 568
+  },
+  "brand": {
+   "src": "/work/gioco-news/04-brand.jpg",
+   "width": 1112,
+   "height": 517
+  },
+  "buttons-tabs": {
+   "src": "/work/gioco-news/05-buttons-tabs.jpg",
+   "width": 1120,
+   "height": 321
+  },
+  "inputs": {
+   "src": "/work/gioco-news/06-inputs.jpg",
+   "width": 1120,
+   "height": 321
+  },
+  "icons": {
+   "src": "/work/gioco-news/07-icons.jpg",
+   "width": 1120,
+   "height": 131
+  },
+  "cards": {
+   "src": "/work/gioco-news/08-cards.jpg",
+   "width": 1120,
+   "height": 938
+  },
+  "page-home": {
+   "src": "/work/gioco-news/09-page-home.jpg",
+   "width": 1112,
+   "height": 568
+  },
+  "page-article": {
+   "src": "/work/gioco-news/10-page-article.jpg",
+   "width": 1112,
+   "height": 568
+  },
+  "page-top-list": {
+   "src": "/work/gioco-news/11-page-top-list.jpg",
+   "width": 1112,
+   "height": 568
+  },
+  "page-search": {
+   "src": "/work/gioco-news/12-page-search.jpg",
+   "width": 1120,
+   "height": 557
+  },
+  "page-about": {
+   "src": "/work/gioco-news/13-page-about.jpg",
+   "width": 1112,
+   "height": 568
+  }
+ },
+ "flyingshapes": {
+  "hero": {
+   "src": "/work/flyingshapes/00-hero.jpg",
+   "width": 1072,
+   "height": 549
+  },
+  "product-process": {
+   "src": "/work/flyingshapes/01-product-process.jpg",
+   "width": 1072,
+   "height": 893
+  },
+  "research": {
+   "src": "/work/flyingshapes/02-research.jpg",
+   "width": 1120,
+   "height": 1075
+  },
+  "design-system": {
+   "src": "/work/flyingshapes/03-design-system.jpg",
+   "width": 1072,
+   "height": 718
+  },
+  "buttons-navigation": {
+   "src": "/work/flyingshapes/04-buttons-navigation.jpg",
+   "width": 1072,
+   "height": 275
+  },
+  "inputs": {
+   "src": "/work/flyingshapes/05-inputs.jpg",
+   "width": 1072,
+   "height": 286
+  },
+  "icons": {
+   "src": "/work/flyingshapes/06-icons.jpg",
+   "width": 1072,
+   "height": 236
+  },
+  "cards": {
+   "src": "/work/flyingshapes/07-cards.jpg",
+   "width": 1072,
+   "height": 432
+  },
+  "website": {
+   "src": "/work/flyingshapes/08-website.jpg",
+   "width": 992,
+   "height": 2126
+  },
+  "social-grid": {
+   "src": "/work/flyingshapes/09-social-grid.jpg",
+   "width": 1080,
+   "height": 1490
+  },
+  "social-featured": {
+   "src": "/work/flyingshapes/10-social-featured.jpg",
+   "width": 954,
+   "height": 940
+  },
+  "card": {
+   "src": "/work/flyingshapes/card.jpg",
+   "width": 594,
+   "height": 418
+  }
+ },
+ "myrhis": {
+  "hero": {
+   "src": "/work/myrhis/00-hero.jpg",
+   "width": 1030,
+   "height": 587
+  },
+  "logo-mark": {
+   "src": "/work/myrhis/01-logo-mark.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "palette": {
+   "src": "/work/myrhis/02-palette.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "mark-construction": {
+   "src": "/work/myrhis/03-mark-construction.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "logo-blue-orange": {
+   "src": "/work/myrhis/04-logo-blue-orange.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "logo-dark-light": {
+   "src": "/work/myrhis/05-logo-dark-light.jpg",
+   "width": 1030,
+   "height": 581
+  },
+  "logo-deep-blue": {
+   "src": "/work/myrhis/06-logo-deep-blue.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "logo-on-shape": {
+   "src": "/work/myrhis/07-logo-on-shape.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "app-icon": {
+   "src": "/work/myrhis/08-app-icon.jpg",
+   "width": 1030,
+   "height": 355
+  },
+  "app-icon-system": {
+   "src": "/work/myrhis/09-app-icon-system.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "mark-meaning": {
+   "src": "/work/myrhis/10-mark-meaning.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "colours": {
+   "src": "/work/myrhis/11-colours.jpg",
+   "width": 1030,
+   "height": 580
+  },
+  "palette-rationale": {
+   "src": "/work/myrhis/12-palette-rationale.jpg",
+   "width": 1030,
+   "height": 486
+  },
+  "web-sizes": {
+   "src": "/work/myrhis/13-web-sizes.jpg",
+   "width": 1030,
+   "height": 395
+  },
+  "mobile-app-logo": {
+   "src": "/work/myrhis/14-mobile-app-logo.jpg",
+   "width": 1030,
+   "height": 405
+  },
+  "combinations": {
+   "src": "/work/myrhis/15-combinations.jpg",
+   "width": 1030,
+   "height": 428
+  },
+  "palette-cards": {
+   "src": "/work/myrhis/16-palette-cards.jpg",
+   "width": 1030,
+   "height": 360
+  },
+  "mockup-login": {
+   "src": "/work/myrhis/17-mockup-login.jpg",
+   "width": 1030,
+   "height": 533
+  },
+  "mockup-email": {
+   "src": "/work/myrhis/18-mockup-email.jpg",
+   "width": 1030,
+   "height": 607
+  },
+  "mockup-phones": {
+   "src": "/work/myrhis/19-mockup-phones.jpg",
+   "width": 1030,
+   "height": 533
+  },
+  "thank-you": {
+   "src": "/work/myrhis/20-thank-you.jpg",
+   "width": 1030,
+   "height": 581
+  }
+ },
+ "home": {
+  "portrait": {
+   "src": "/raoua.jpg",
+   "width": 1024,
+   "height": 1280
+  },
+  "gioco-card": {
+   "src": "/work/gioco-news/card.jpg",
+   "width": 777,
+   "height": 394
+  },
+  "myrhis-card": {
+   "src": "/work/myrhis/card.jpg",
+   "width": 796,
+   "height": 454
+  }
+ },
+ "tools": {
+  "figma": {
+   "src": "/tools/figma.png",
+   "width": 256,
+   "height": 256
+  },
+  "after-effects": {
+   "src": "/tools/after-effects.png",
+   "width": 256,
+   "height": 250
+  },
+  "lovable": {
+   "src": "/tools/lovable.png",
+   "width": 256,
+   "height": 256
+  },
+  "polymet": {
+   "src": "/tools/polymet.png",
+   "width": 256,
+   "height": 256
+  },
+  "claude": {
+   "src": "/tools/claude.png",
+   "width": 256,
+   "height": 255
+  },
+  "framer": {
+   "src": "/tools/framer.png",
+   "width": 256,
+   "height": 256
+  }
+ }
+}

@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+/* Colours are defined once, by role, for both themes. Components only ever
+   use the role (bg, surface, line, ink, muted, accent), never a raw value.
+   Light is the design as Raoua drew it; dark is the same palette at night. */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7fc;
+  --surface-2: #efeff8;
+  --line: #ececf3;
+  --tag-line: #e3e3fc;
+  --ink: #141414;
+  --soft: #2f2f38;
+  --muted: #6b6b76;
+  --accent: #6c6cff;
+  --accent-ink: #ffffff;
+  --available: #2bb673;
+  --glow: rgb(108 108 255 / 0.12);
+  --shadow: 0 1px 2px rgb(20 20 40 / 0.04), 0 18px 40px -18px rgb(40 40 120 / 0.18);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0c0c11;
+  --surface: #14141c;
+  --surface-2: #1b1b25;
+  --line: #24242f;
+  --tag-line: #34345a;
+  --ink: #f3f3f7;
+  --soft: #d4d4de;
+  --muted: #9b9bab;
+  --accent: #8a8aff;
+  --accent-ink: #0c0c11;
+  --available: #3ccf88;
+  --glow: rgb(138 138 255 / 0.16);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 24px 48px -20px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+/* Without JavaScript no theme is set: light, unless the device asks for dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0c0c11;
+    --surface: #14141c;
+    --surface-2: #1b1b25;
+    --line: #24242f;
+    --tag-line: #34345a;
+    --ink: #f3f3f7;
+    --soft: #d4d4de;
+    --muted: #9b9bab;
+    --accent: #8a8aff;
+    --accent-ink: #0c0c11;
+    --available: #3ccf88;
+    --glow: rgb(138 138 255 / 0.16);
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 24px 48px -20px rgb(0 0 0 / 0.6);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-tag-line: var(--tag-line);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-available: var(--available);
+  --color-case: var(--case);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-instrument);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* The italic serif word in the hero and contact titles ("Raoua", "something"). */
+.serif-accent {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+/* A case study page takes the colour of its project (Gioco red, Flyingshapes
+   violet, MyRHIS blue). In dark mode the colour is lifted so it stays legible. */
+.case {
+  --case-ink: var(--case);
+}
+:root[data-theme="dark"] .case {
+  --case-ink: color-mix(in srgb, var(--case) 62%, white);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .case {
+    --case-ink: color-mix(in srgb, var(--case) 62%, white);
+  }
+}
+.text-case { color: var(--case-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+/* Theme toggle: both icons are rendered, the theme decides which one shows,
+   so the server and the browser never disagree on the markup. */
+.theme-moon { display: none; }
+:root[data-theme="dark"] .theme-moon { display: block; }
+:root[data-theme="dark"] .theme-sun { display: none; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Motion and interaction. Everything here is driven by data attributes that
+   components/Interactions.tsx reads once for the whole page.
+
+   `html.js` is set by an inline script before the first paint: without
+   JavaScript nothing is hidden, so the page stays readable.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Scroll reveal: [data-reveal] fades and rises when it enters the viewport.
+   `--d` staggers siblings. */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0s), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0s);
+  will-change: opacity, transform;
+}
+html.js [data-reveal="left"] { transform: translate3d(-40px, 0, 0); }
+html.js [data-reveal="right"] { transform: translate3d(40px, 0, 0); }
+html.js [data-reveal="zoom"] { transform: scale(0.95); }
+html.js [data-reveal].in { opacity: 1; transform: none; }
+
+/* Hero title: each line rises from behind a mask. */
+.line-mask { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.line-mask > span { display: inline-block; }
+html.js .line-mask > span { transform: translate3d(0, 105%, 0); transition: transform 1s cubic-bezier(0.2, 0.75, 0.15, 1) var(--d, 0s); }
+html.js .in .line-mask > span { transform: none; }
+
+/* Scroll progress bar under the header. */
+.progress {
+  transform: scaleX(var(--progress, 0));
+  transform-origin: 0 50%;
+  background: var(--case-ink, var(--accent));
+}
+
+/* Cursor glow: a soft light that follows the pointer inside [data-spotlight]. */
+[data-spotlight] { position: relative; }
+[data-spotlight]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: var(--spot, 0);
+  transition: opacity 0.4s;
+  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), var(--glow), transparent 60%);
+}
+
+/* Cards that light their border under the pointer. */
+.glow-card { position: relative; isolation: isolate; }
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: var(--spot, 0);
+  transition: opacity 0.35s;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), var(--accent), transparent 70%);
+}
+.glow-card > .glow-inner { border-radius: inherit; background: var(--surface); height: 100%; }
+
+/* 3D tilt: [data-tilt] rotates toward the pointer. */
+[data-tilt] {
+  transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.3s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Magnetic buttons drift toward the pointer, and keep their colour transitions. */
+[data-magnetic] {
+  transform: translate(var(--tx, 0px), var(--ty, 0px));
+  transition: transform 0.25s ease-out, filter 0.2s, color 0.2s, border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Parallax layers follow the pointer smoothly. */
+[data-parallax] { transition: transform 0.4s ease-out; }
+
+/* "Available for work": the dot breathes. */
+.pulse { position: relative; }
+.pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--available);
+  animation: pulse 2.2s ease-out infinite;
+}
+@keyframes pulse { 0% { transform: scale(1); opacity: 0.6; } 80%, 100% { transform: scale(2.6); opacity: 0; } }
+
+.float { animation: float 6s ease-in-out infinite; animation-delay: var(--fd, 0s); }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+
+/* Project images zoom slowly inside their frame on hover. */
+.zoom-media { overflow: hidden; }
+.zoom-media img { transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.group:hover .zoom-media img { transform: scale(1.04); }
+
+/* Arrow links nudge their arrow on hover. */
+.nudge svg { transition: transform 0.25s ease-out; }
+.nudge:hover svg { transform: translateX(4px); }
+.nudge-back:hover svg { transform: translateX(-4px); }
+
+/* Tool tiles: the stack slides on phones. */
+.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: marquee 26s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Lightbox. */
+.lightbox-in { animation: lightbox-in 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes lightbox-in { from { opacity: 0; transform: scale(0.97); } }
+.fade-in { animation: fade-in 0.25s ease-out both; }
+@keyframes fade-in { from { opacity: 0; } }
+
+/* Menu rows on a phone appear one after the other. */
+.row-in { animation: row-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0s); }
+@keyframes row-in { from { opacity: 0; transform: translateY(18px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal], html.js .line-mask > span { opacity: 1; transform: none; }
+  [data-tilt], [data-magnetic], [data-parallax] { transform: none !important; }
+  .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
+  .marquee-dup { display: none; }
+}
